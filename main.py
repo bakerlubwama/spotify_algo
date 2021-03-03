@@ -39,5 +39,3 @@ def get_playlist_choices():
 
 bakers_choices = get_playlist_choices()
 print(bakers_choices)
-
-Testing
