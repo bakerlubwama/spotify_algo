@@ -42,5 +42,41 @@ def get_playlist_choices():
     return playlist_ids
 
 
-bakers_choices = get_playlist_choices()
-print(bakers_choices)
+user_choices = get_playlist_choices()
+print(user_choices)
+
+#step 3: take 5 random songs from each 
+def song_selection():
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+#step 4: add tracks to queue
+def queue_tracks():
+    
+
+
