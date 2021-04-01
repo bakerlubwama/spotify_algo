@@ -87,8 +87,22 @@ dj_final_selection = song_selection_flatten()
 
 print(dj_final_selection) # prints final selection of songs consisting of n number of songs from each of the selected playlists
 
+
+
+
 #step 4: add tracks to queue
-def queue_tracks():
-    
+QUEUE_ACCESS_TOKEN = 'BQC4kVlPunoh-gSGSJo5-JEZKmonBS8bha2JQtsvyqo4O03VQIf37h5oYz8jfF_zYD40nFmFm_peLbLSjwMATIl1HFOtSQlRC6eJdE6iUw7Z-zMdRrwzRuQsM-G4QqhiAHWYENtzoaGtZHHFZmnHtrGR9NuEkHalLUiqqcohyFe8LU4bxaxl4WNaqJ_bigoWb2nSJKLBz4lxJIdyh4J2ijAJ0fIV'
+ADD_ITEM_TO_QUEUE_URL = 'https://api.spotify.com/v1/me/player/queue?uri={}'
 
+def queue_tracks(track_list):
+    for track in track_list:
+        requests.post(
+            ADD_ITEM_TO_QUEUE_URL.format(track),
+            headers={
+                "Authorization": f"Bearer {QUEUE_ACCESS_TOKEN}"
+            }
+        )
 
+bakers_tracks = ['spotify:track:5ByAIlEEnxYdvpnezg7HTX', 'spotify:track:2g8HN35AnVGIk7B8yMucww',
+                                                                      'spotify:track:5nUiz96J8ZSmwoSuL4sGvh']
+queue_bakers_tracks = queue_tracks(bakers_tracks)
