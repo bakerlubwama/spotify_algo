@@ -46,29 +46,8 @@ user_choices = get_playlist_choices()
 print(user_choices)
 
 #step 3: take 5 random songs from each 
-#Selects n random songs from each playlist and stores in new list. However list is a list of sublists. i.e [[1,2,3],[4,5,6],[7,8,9]]
 def song_selection():
-    new_list = []
-    n = 3
-    for sublist in songs_list:
-        new_list.append(random.sample(sublist,n))
-    return new_list
-
-dj_random_selection = song_selection()
-
-#cleans previous list of random songs, converting list of lists to flatlist i.e [1,2,3,4,5,6,7,8,9]
-def song_selection_flatten():
-    flat_list = []
-    for sublist in dj_random_selection:
-        for item in sublist:
-            flat_list.append(item)
-    return flat_list
-
-dj_final_selection = song_selection_flatten()
-
-print(dj_final_selection) # prints final selection of songs consisting of n number of songs from each of the selected playlists
-
-
+    
 #step 4: add tracks to queue
 def queue_tracks():
     
