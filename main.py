@@ -103,6 +103,5 @@ def queue_tracks(track_list):
             }
         )
 
-bakers_tracks = ['spotify:track:5ByAIlEEnxYdvpnezg7HTX', 'spotify:track:2g8HN35AnVGIk7B8yMucww',
-                                                                      'spotify:track:5nUiz96J8ZSmwoSuL4sGvh']
-queue_bakers_tracks = queue_tracks(bakers_tracks)
+
+queue_djs_tracks = queue_tracks(dj_final_selection)
