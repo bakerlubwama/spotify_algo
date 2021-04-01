@@ -64,7 +64,7 @@ songs_dicts = user_choices_songs.values()
 
 songs_list = list(songs_dicts)
 
-""" Step 3 """
+#Step 3
 #Selects n random songs from each playlist and stores in new list. However list is a list of sublists. i.e [[1,2,3],[4,5,6],[7,8,9]]
 def song_selection():
     new_list = []
